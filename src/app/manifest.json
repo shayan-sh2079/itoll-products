@@ -1,0 +1,15 @@
+{
+  "name": "Products pwa app",
+  "short_name": "products",
+  "icons": [
+    {
+      "src": "/icons/pwa-icon.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "start_url": "/",
+  "display": "standalone"
+}
