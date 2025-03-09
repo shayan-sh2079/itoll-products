@@ -15,7 +15,7 @@ export default async function Home(props: {
   return (
     <div className={"flex flex-col"}>
       <ProductsHeader />
-      <ProductsList products={products} />
+      <ProductsList products={products} initialTitle={searchParams?.title} />
     </div>
   );
 }

@@ -2,15 +2,14 @@
 import Input from "@/components/ui/Input";
 import { useCallback, useState } from "react";
 import useDebounceCallback from "@/hooks/useDebounceCallback";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 const ProductsSearch = () => {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const [value, setValue] = useState(searchParams.get("title") || "");
 
   const handleSearch = useCallback((title: string) => {
-    router.push(title ? `/?title=${title}` : "/");
+    window.history.pushState(null, "", `${title ? `/?title=${title}` : "/"}`);
   }, []);
 
   useDebounceCallback(value, handleSearch);

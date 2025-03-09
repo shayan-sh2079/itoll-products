@@ -1,6 +1,8 @@
 "use server";
 
-export const getProductsList = async (title?: string): Promise<Product[]> => {
+export const getProductsList = async (
+  title?: string | null,
+): Promise<Product[]> => {
   try {
     const data = await fetch(
       "https://freetestapi.com/api/v1/products/" +
