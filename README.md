@@ -17,3 +17,5 @@ And after that, run the project:
 ```bash
 pnpm start
 ```
+
+then visit [localhost](http://localhost:3000)
